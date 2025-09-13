@@ -15,7 +15,7 @@ const HeroSection = ({ darkMode }) => {
       id="hero"
       className={`w-full pt-24 pb-12 ${
         darkMode ? "bg-black text-white" : "bg-white text-black"
-      }`}
+      } gradient-wave py-20 bg-transparent`}
     >
       <div className="max-w-[1240px] mx-auto px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
         {/* Text Section */}

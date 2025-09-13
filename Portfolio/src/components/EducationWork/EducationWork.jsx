@@ -7,10 +7,9 @@ const EducationWork = ({ darkMode }) => {
       id="education"
       className={`w-full py-16 ${
         darkMode ? "bg-black text-white" : "bg-white text-black"
-      }`}
+      }gradient-wave py-20`}
     >
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8">
-      
         <div className="text-center mb-12" data-aos="fade-up">
           <p className="text-pink-500 font-semibold mb-2 tracking-widest">
             Education & Work
@@ -21,9 +20,7 @@ const EducationWork = ({ darkMode }) => {
           </h2>
         </div>
 
-       
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-         
           <div
             data-aos="fade-right"
             className={`rounded-xl border p-6 ${
@@ -53,7 +50,7 @@ const EducationWork = ({ darkMode }) => {
               </div>
             </div>
           </div>
-          
+
           {/* Work Card */}
           <div
             data-aos="fade-left"
