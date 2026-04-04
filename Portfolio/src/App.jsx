@@ -14,6 +14,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import CaseStudy from "./components/CaseStudy/CaseStudy";
 import MarketingSection from "./components/GraphicWork/MarketingSection";
+import SocialMedia from "./components/SocialMedia";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -44,6 +45,7 @@ function App() {
               <MarketingSection darkMode={darkMode} />
               <Services darkMode={darkMode} />
               <Contact darkMode={darkMode} />
+              <SocialMedia darkMode={darkMode} />
               <Footer darkMode={darkMode} />
             </>
           }

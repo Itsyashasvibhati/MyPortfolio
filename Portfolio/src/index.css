@@ -3,7 +3,7 @@
 body {
   cursor: url('/src/assets/cursor/mouseclicker.png'), auto;
 }
-/* 🌊 Animated Gradient Background */
+🌊 Animated Gradient Background */
 body {
   background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
   background-size: 400% 400%;
@@ -21,3 +21,23 @@ body {
     background-position: 0% 50%;
   }
 }
+
+/* .gradient-wave {
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
