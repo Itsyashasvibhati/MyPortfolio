@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Card, SectionHeading } from "./common/StyledComponents";
-import jiraImage from "../assets/Jira dashboard.png";
+import jiraImage from "../assets/jira-dashboard.png";
 
 const QAProject = ({ darkMode = false }) => {
 
