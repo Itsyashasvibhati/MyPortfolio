@@ -11,10 +11,14 @@ import Services from "./components/Services/Services";
 import EducationWork from "./components/EducationWork/EducationWork";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer_new";
 import CaseStudy from "./components/CaseStudy/CaseStudy";
 import MarketingSection from "./components/GraphicWork/MarketingSection";
 import SocialMedia from "./components/SocialMedia";
+import Skills from "./components/Skills";
+
+import Certifications from "./components/Certification";
+import QAProject from "./components/QAProject";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -40,6 +44,10 @@ function App() {
               <HeroSection darkMode={darkMode} />
               <About darkMode={darkMode} />
               <EducationWork darkMode={darkMode} />
+              <Skills darkMode={darkMode} />
+             
+              <Certifications darkMode={darkMode} />
+              <QAProject darkMode={darkMode} />
               <MyWork darkMode={darkMode} />
               <GraphicWork darkMode={darkMode} />
               <MarketingSection darkMode={darkMode} />

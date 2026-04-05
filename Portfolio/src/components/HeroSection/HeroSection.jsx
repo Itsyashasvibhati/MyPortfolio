@@ -1,8 +1,9 @@
 import { FaReact, FaNodeJs, FaJs, FaFigma } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
+import { Button } from "../common/StyledComponents";
 import profileImg from "../../assets/HeroSectionImg/professionalpic.png";
 
-const HeroSection = ({ darkMode }) => {
+const HeroSection = ({ darkMode = false }) => {
   const scrollToContact = () => {
     const section = document.getElementById("contact");
     if (section) {
@@ -23,28 +24,38 @@ const HeroSection = ({ darkMode }) => {
       </div>
 
       {/* Content Container */}
-      <div className="max-w-[1240px] mx-auto px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col-reverse md:flex-row items-center justify-between gap-6 md:gap-10">
         {/* Left Text Section */}
         <div
           className="flex-1 flex flex-col gap-6 text-center md:text-left"
           data-aos="fade-right"
         >
           <p className="text-pink-500 font-semibold">Introduction</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
             Hello, <br />
             I'm <span className="text-yellow-400">Yashasvi Bhati</span>
           </h1>
-          <p className="text-gray-200 dark:text-gray-300 max-w-md mx-auto md:mx-0">
-            I’m a passionate Software Developer skilled in building responsive
-            web apps using modern technologies. I love crafting smooth user
-            experiences and writing clean, efficient code.
+          <p className={`text-lg leading-relaxed max-w-md mx-auto md:mx-0 ${
+            darkMode ? "text-gray-300" : "text-gray-700"
+          }`}>
+            I'm a Software Developer, QA Tester, and Product Enthusiast with experience in building and managing digital products. I work at the intersection of development, quality assurance, and design to create reliable and user-friendly applications.
           </p>
-          <button
-            onClick={scrollToContact}
-            className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-3 rounded-full hover:scale-105 transition mx-auto md:mx-0 w-fit shadow-md"
-          >
-            Contact Me
-          </button>
+          <div className="flex gap-4 justify-center md:justify-start flex-wrap">
+            <Button
+              onClick={scrollToContact}
+              variant="primary"
+              darkMode={darkMode}
+            >
+              Contact Me →
+            </Button>
+            <Button
+              href="#mywork"
+              variant="outline"
+              darkMode={darkMode}
+            >
+              View Work →
+            </Button>
+          </div>
         </div>
 
         {/* Right Image Section */}

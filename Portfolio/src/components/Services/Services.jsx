@@ -4,13 +4,13 @@ import {
   FaReact,
   FaNodeJs,
   FaPencilRuler,
-  FaMobileAlt,
   FaChalkboardTeacher,
   FaProjectDiagram,
 } from "react-icons/fa";
-import { SiMongodb, SiExpress } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { ServiceCard, SectionHeading } from "../common/StyledComponents";
 
-const Services = ({ darkMode }) => {
+const Services = ({ darkMode = false }) => {
   const services = [
     {
       id: 1,
@@ -67,62 +67,40 @@ const Services = ({ darkMode }) => {
       description:
         "Crafting sleek UI/UX designs for websites with Figma & modern tools.",
     },
-    {
-      id: 9,
-      title: "Content Creation",
-      icon: <FaMobileAlt />,
-      description:
-        "Creating engaging social media content and marketing materials.",
-    },
   ];
 
   return (
-    <div
+    <section
       id="myservices"
-      className={`relative w-full py-20 px-6 overflow-hidden ${
-        darkMode ? "bg-[#0d0d0d] text-white" : "bg-[#f7faff] text-black"
+      className={`w-full py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden ${
+        darkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
-      {/* 🎨 Gradient Background Effects */}
-      <div className="absolute top-[-60px] left-[-60px] w-[200px] h-[200px] bg-gradient-to-br from-purple-500 to-pink-500 opacity-20 rounded-full blur-[100px] z-0" />
-      <div className="absolute bottom-[0] right-[-60px] w-[300px] h-[300px] bg-gradient-to-br from-yellow-400 to-orange-500 opacity-20 rounded-full blur-[120px] z-0" />
-
-      <div className="relative z-10 max-w-[1240px] mx-auto">
+      <div className="max-w-[1240px] mx-auto">
         {/* Heading */}
-        <div className="text-center mb-12" data-aos="fade-up">
-          <p className="text-pink-500 font-semibold uppercase">My Services</p>
-          <h2 className="text-4xl font-bold mt-2">
-            What <span className="text-yellow-500">I Offer</span>
-          </h2>
-          <p className="text-gray-500 mt-4 max-w-[600px] mx-auto">
-            Transforming ideas into reality through design, development, and
-            guidance.
-          </p>
-        </div>
+        <SectionHeading
+          label="My Services"
+          title="What"
+          titleAccent="I Offer"
+          description="Transforming ideas into reality through design, development, and guidance."
+          darkMode={darkMode}
+        />
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={service.id}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-              className={`rounded-xl p-6 border shadow-lg backdrop-blur-md hover:scale-[1.03] transition-transform ${
-                darkMode
-                  ? "bg-white/5 border-white/10"
-                  : "bg-white/70 border-gray-200"
-              }`}
-            >
-              <div className="text-4xl text-pink-500 mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                {service.description}
-              </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {services.map((service) => (
+            <div key={service.id} data-aos="fade-up">
+              <ServiceCard
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                darkMode={darkMode}
+              />
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

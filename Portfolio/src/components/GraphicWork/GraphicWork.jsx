@@ -126,16 +126,6 @@ const GraphicWork = ({ darkMode }) => {
               />
               <div className="p-4">
                 <h4 className="text-lg font-semibold">{work.title}</h4>
-
-                {work.hasCaseStudy && (
-                  <Link
-                    to={`/project/${work.id}`}
-                    className="inline-block mt-2 text-yellow-500 hover:underline"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    View Case Study →
-                  </Link>
-                )}
               </div>
             </div>
           ))}

@@ -2,14 +2,12 @@ import React from "react";
 import {
   FaGithub,
   FaLinkedin,
-  FaHackerrank,
   FaBehance,
   FaGlobe,
 } from "react-icons/fa";
+import { Card, SectionHeading } from "./common/StyledComponents";
 
-import { SiLeetcode } from "react-icons/si";
-
-const SocialMedia = ({ darkMode }) => {
+const SocialMedia = ({ darkMode = false }) => {
   const socials = [
     {
       name: "GitHub",
@@ -20,16 +18,6 @@ const SocialMedia = ({ darkMode }) => {
       name: "LinkedIn",
       icon: <FaLinkedin />,
       link: "https://www.linkedin.com/in/yashasvi",
-    },
-    {
-      name: "LeetCode",
-      icon: <SiLeetcode />,
-      link: "https://leetcode.com/u/theyashasvibhati_/",
-    },
-    {
-      name: "HackerRank",
-      icon: <FaHackerrank />,
-      link: "https://www.hackerrank.com/profile/yashasvibhati131",
     },
     {
       name: "Behance",
@@ -46,25 +34,21 @@ const SocialMedia = ({ darkMode }) => {
   return (
     <section
       id="social"
-      className={`w-full py-20 ${
+      className={`w-full py-16 md:py-20 lg:py-24 ${
         darkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
-      <div className="max-w-[1240px] mx-auto px-6">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
 
-        {/* Heading */}
-        <div className="text-center mb-14" data-aos="fade-up">
-          <p className="text-pink-500 font-semibold tracking-widest">
-            Social Media
-          </p>
-
-          <h2 className="text-3xl sm:text-4xl font-bold mt-2">
-            Connect With <span className="text-yellow-500">Me</span>
-          </h2>
-        </div>
+        <SectionHeading
+          label="Social Media"
+          title="Connect With"
+          titleAccent="Me"
+          darkMode={darkMode}
+        />
 
         {/* Social Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
 
           {socials.map((social, index) => (
             <a
@@ -72,17 +56,19 @@ const SocialMedia = ({ darkMode }) => {
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex flex-col items-center justify-center p-6 rounded-xl border transition transform hover:-translate-y-2 hover:shadow-xl ${
-                darkMode
-                  ? "bg-[#111] border-[#333]"
-                  : "bg-gray-100 border-gray-300"
-              }`}
+              data-aos="zoom-in"
             >
-              <div className="text-4xl mb-3 text-yellow-500">
-                {social.icon}
-              </div>
+              <Card
+                darkMode={darkMode}
+                hover={true}
+                className="flex flex-col items-center justify-center p-6 text-center h-full"
+              >
+                <div className="text-3xl mb-3 text-yellow-500">
+                  {social.icon}
+                </div>
 
-              <p className="font-semibold text-sm">{social.name}</p>
+                <p className="font-semibold text-sm">{social.name}</p>
+              </Card>
             </a>
           ))}
 

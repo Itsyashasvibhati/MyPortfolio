@@ -57,7 +57,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <div className="flex items-center gap-3">
           {/* Buttons hidden on mobile */}
           <a
-            href="/resume.pdf"
+            href="/Professionalresume.pdf"
             download
             className="hidden md:block bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm hover:scale-105 transition"
           >
@@ -115,7 +115,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
           <li>
             <a
-              href="/resume.pdf"
+              href="/Professionalresume.pdf"
               download
               className="block w-full text-center bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full hover:scale-105 transition"
             >
