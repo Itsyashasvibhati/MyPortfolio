@@ -1,7 +1,7 @@
 import React from "react";
 import fanta from "../../assets/MyWork/fantaTemplate.png";
 import icecream from "../../assets/MyWork/IcecreamTemplate.png";
-import beauty from "../../assets/MyWork/skinTone.png";
+import beauty from "../../assets/MyWork/Skintone.png";
 import compact from "../../assets/MyWork/CompactArt.png";
 
 const MarketingSection = ({ darkMode }) => {
