@@ -17,7 +17,7 @@ const SocialMedia = ({ darkMode = false }) => {
     {
       name: "LinkedIn",
       icon: <FaLinkedin />,
-      link: "https://www.linkedin.com/in/yashasvi",
+      link: "https://www.linkedin.com/in/yashasvi-bhati-8444b82a1/",
     },
     {
       name: "Behance",
